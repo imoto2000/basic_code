@@ -1,4 +1,10 @@
 BasicCode::Application.routes.draw do
+  get "topics/index"
+
+  get "topics/update"
+
+  get "topics/show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
