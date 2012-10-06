@@ -41,6 +41,6 @@ gem 'aws-s3',:require => 'aws/s3'
 #gem "kaminari"
 #gem "nokogiri"
 
-#gem "mongoid"
-#gem "bson_ext"
+gem "mongoid"
+gem "bson_ext"
 #gem "xml-simple"

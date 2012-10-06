@@ -1,0 +1,21 @@
+development:
+  host: localhost
+  database: mongodemo_development
+
+test:
+  host: localhost
+  database: mongodemo_test
+
+# set these environment variables on your prod server
+production:
+  uri: "mongodb://heroku:87ba5ba1352b1ce28c441a3704e19400@alex.mongohq.com:10082/app8183143"
+  #host: <%= ENV['MONGOID_HOST'] %>
+  #port: <%= ENV['MONGOID_PORT'] %>
+  #username: <%= ENV['MONGOID_USERNAME'] %>
+  #password: <%= ENV['MONGOID_PASSWORD'] %>
+  #database: <%= ENV['MONGOID_DATABASE'] %>
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019

@@ -37,6 +37,8 @@ class TopicsController < ApplicationController
   end
 
   def show
+    @topic = Topic.find(params[:id])
+    @pv = PV.count_up(params[:id])
   end
 
   def delete_cache

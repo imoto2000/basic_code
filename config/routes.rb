@@ -3,7 +3,7 @@ BasicCode::Application.routes.draw do
   post "topics/update"
   get "topics/:id/image" , :to => "topics#image" , :as => "topic_image"
   get "topics/:id/image_thumbnail" , :to => "topics#image_thumbnail" , :as => "topic_thumbnail"
-  get "topics/show"
+  get "topics/:id/show" , :to => "topics#show" , :as => "topic"
   get "topics/:id/delete_cache" , :to => "topics#delete_cache"
 
   # The priority is based upon order of creation:
