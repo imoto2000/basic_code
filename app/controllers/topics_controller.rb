@@ -5,7 +5,13 @@ class TopicsController < ApplicationController
 
   def update
     t = Topic.new(params[:topic])
-    t.image_date=(params[:topic][:image].read)
+   
+    if  params[:topic][:image_url].blank?
+      t.image_data=(params[:topic][:image].read)
+    else
+      t.image_url=(params[:topic][:image_url])
+    end
+    
     if t.valid?
       t.save
       redirect_to topics_index_path and return
@@ -44,7 +50,7 @@ class TopicsController < ApplicationController
   def delete_cache
     Rails.cache.delete("topic_image/#{params[:id]}")
     Rails.cache.delete("topic_thumbnail/#{params[:id]}")
-    redirect_to :root_path and return
+    redirect_to root_path and return
   end
 
 end

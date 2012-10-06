@@ -1,8 +1,9 @@
 
 <%= form_for Topic.new , :url => topics_update_path do |f| %>
-<%= f.text_field :title %>
-<%= f.text_field :description %>
+<%= f.text_field :title ,:placeholder => "タイトル" %>
+<%= f.text_field :description ,:placeholder => "説明" %>
 <%= f.file_field :image %>
+<%= f.text_field :image_url ,:placeholder => "外部URLはここに書いてください"%>
 <%= f.submit "送信する" %>
 <% end %>
 

@@ -29,7 +29,7 @@ gem "delayed_job_active_record"
 #gem 'memcachier'
 
 gem "rails_autolink"
-#gem "rest-client"
+gem "rest-client"
 
 
 #gem 'therubyracer'

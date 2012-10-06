@@ -1,11 +1,13 @@
+require "open-uri"
+
 class Topic < ActiveRecord::Base
-  attr_accessible :description, :image, :title
+  attr_accessible :description, :image, :title ,:image_url
 
   def set_image_filename
     self.image = rand(10**80).to_s(32) + ".jpg"
   end
 
-  def image_date=(data)
+  def image_data=(data)
     connect_s3!
     set_image_filename
     AWS::S3::S3Object.store(self.image , data , Rails.application.config.amazon_bucket)
@@ -18,13 +20,14 @@ class Topic < ActiveRecord::Base
   end
 
   def image_url=(url)
+    return if url.nil?
     begin
-      u = URI.parse(url)
-      im = open(u).read
-      if(im.size != 0)
+      im = RestClient .get(url)
+      if(im.size != 0 )
         self.image_data = im
       end
-    rescue
+    rescue => err
+      $stderr.puts err
     end
   end
 
