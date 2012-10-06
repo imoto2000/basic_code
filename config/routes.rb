@@ -1,8 +1,7 @@
 BasicCode::Application.routes.draw do
   get "topics/index"
-
   post "topics/update"
-
+  get "topics/:id/image" , :to => "topics#image"
   get "topics/show"
 
   # The priority is based upon order of creation:

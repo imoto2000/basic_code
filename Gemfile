@@ -31,13 +31,13 @@ gem "delayed_job_active_record"
 gem "rails_autolink"
 #gem "rest-client"
 
-#gem 'memcachier'
+
 #gem 'therubyracer'
 #gem 'omniauth'
 #gem "omniauth-facebook"
 #gem 'oauth'
-#gem 'rmagick',:require => 'RMagick'
-#gem 'aws-s3',:require => 'aws/s3'
+gem 'rmagick',:require => 'RMagick'
+gem 'aws-s3',:require => 'aws/s3'
 #gem "kaminari"
 #gem "nokogiri"
 
