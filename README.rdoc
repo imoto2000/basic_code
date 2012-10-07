@@ -9,7 +9,9 @@ Ruby 1.9.3
 
 == Functions
 
-Test with spork
-Upload image to Amazon S3
-Use Mongodb with mongoid
+Test with spork /
+Upload image to Amazon S3 /
+Use Mongodb with mongoid /
+Youtube iframe /
+
 

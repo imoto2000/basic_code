@@ -14,7 +14,7 @@
   <% @topics.each do |f| %>
   <li><%=link_to f.id , topic_path(f.id)  %></li>
   <li><%=f.title %></li>
-  <li><%=f.description %></li>
+  <li><%=format_with_link f.description %></li>
   <li><%=image_tag "/topics/#{f.id}/image_thumbnail?width=100&height=50" %></li>
   <hr>
   <% end %>
